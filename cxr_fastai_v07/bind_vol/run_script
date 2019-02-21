@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo 'Starting Python Data Handler'
+python PHANTUM/server_service_provider/service_provider_backend.py

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo 'Starting R HelloWorld API server'
+cd r_test_code/
+Rscript r_server_test.R
+#echo 'TEST!'

@@ -1,0 +1,25 @@
+
+version: '3.2'
+services:
+   pydata:
+      image: pydata_hello_conda
+      volumes:
+         - type: bind
+           source: ../data_handler_python_flask/bind_vol
+           target: /app/bind
+      networks:
+         - gateway
+      ports:
+         - "5002:5002"
+   rserver:
+      image: rserver_conda
+      volumes:
+         - type: bind
+           source: ../r_server_docker/bind_vol
+           target: /app/bind
+      networks:
+         - gateway
+      ports:
+         - "5443:5443"
+networks:
+   gateway: {}
